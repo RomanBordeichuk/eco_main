@@ -1,0 +1,381 @@
+*{
+  font-family: 'Rubik', sans-serif;
+}
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+
+/*******PRELOADER********/
+
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #8cdea2;
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #3ba343;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+
+/*******HEADER********/
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 70px;
+  box-shadow: 0 0 20px #d1d1d1;
+  padding: 100px;
+  margin-bottom: 100px;
+}
+.wrap{
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+header{
+  background: url(../img/header3.png);
+  background-size: 100%;
+  background-size: cover;
+  height: 470px;
+}
+header .wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .nav_container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .nav_container .logo{
+  width: 16%; 
+  display: flex;
+  align-items: flex-end;
+}
+header .nav_container .logo img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+header .nav_container nav{
+  display: flex;
+  width: 55%;
+}
+header .nav_container nav a{
+  padding: 25px; 
+  text-decoration: none;
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+header .nav_container nav a:nth-child(3){
+  color: #C0B912;
+}
+header .nav_container .test_container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 12%;
+}
+header .nav_container .test_container a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  border: 4px solid #C0B912;
+  padding: 15px 20px; 
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+header h1{
+  color: white;
+  font-size: 80px;  
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Rubik Mono One'
+}
+header span{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+/*******HEAD_BLOCK********/
+
+
+.head{
+  color: #575757;
+}
+.head h2{
+  margin-top: 100px;
+  font-size: 40px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.head p{
+  font-size: 24px;
+  font-weight: bold;
+  width: 80%;
+  color: #404040;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+
+/*******ONTOLOGY********/
+
+
+.ontology{
+  margin-bottom: 100px;
+}
+.ontology > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.top_block, .bottom_block{
+  width: 80%;
+  display: flex;
+}
+.top_block .img, .bottom_block .img{
+  width: 30%;
+}
+.top_block img, .bottom_block img{
+  width: 100%;
+}
+.top_block .title, .bottom_block .title{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.top_block .title{
+  align-items: flex-start;
+}
+.bottom_block .title{
+  align-items: flex-end;
+}
+.top_block .title h3, .bottom_block .title h3{
+  align-self: center;
+  color: #575757;
+}
+.top_block .title > div, .bottom_block .title > div{
+  height: 60%;
+  box-sizing: border-box;
+  width: 85%;
+}
+.top_block{
+  justify-content: flex-start;
+}
+.bottom_block{
+  justify-content: flex-end;
+}
+.top_block .title{
+  justify-content: flex-end;
+}
+.top_block .title > div{
+  border-top: 5px dashed #575757;
+  border-right: 5px dashed #575757;
+}
+.bottom_block .title > div{
+  border-bottom: 5px dashed #575757;
+  border-left: 5px dashed #575757;
+}
+.ontology p{
+  width: 40%;
+  text-align: center;
+  color: #575757;
+  font-size: 22px;
+  line-height: 23px;
+  margin: 50px;
+}
+
+
+/*******LINK_START********/
+
+
+.link_start{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background: #6D854E;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link_start a{
+  position: absolute;
+  top: 0px;
+  font-size: 70px;
+  color: white;
+  text-decoration: none;
+}
+
+
+/*******FOOTER********/
+
+
+footer{
+  width: 100%;
+  height: 300px;
+  background: url(../img/footer.png);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+footer .nav_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .nav_container h3{
+  color: #6D854E;
+  font-size: 25px;
+}
+
+
+@media(max-width: 1150px){
+   header .nav_container nav a{
+    font-size: 22px;
+  }
+  header .nav_container .test_container a{
+    font-size: 22px;
+  }
+}
+@media(max-width: 920px){
+  .container{
+    padding: 50px;
+  }
+  header .nav_container .logo{
+    display: none;
+  }
+  header .nav_container nav{
+    width: 70%;
+  }
+  header .nav_container nav a{
+    font-size: calc(3vw + 5px);
+    padding: 10px 15px;
+  }
+  header .nav_container .test_container a{
+    font-size: calc(3vw + 5px);
+    padding: 10px 15px;
+  }
+  header h1{
+    font-size: calc(8vw + 10px);
+  }
+  header span{
+    font-size: calc(4vw + 10px);   
+  }
+  header{
+    height: 350px;
+  }
+  .link_start{
+    display: none;
+  }
+  .head p{
+    width: 100%;
+  }
+  .head h2{
+    width: 100%;
+  }
+  .ontology > div{
+    border-top: 5px dashed #575757;
+    border-bottom: 5px dashed #575757;
+    padding: 20px 0;
+  }
+  .top_block .title > div, .bottom_block .title > div{
+    display: none;
+  }
+  .top_block, .bottom_block{
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .top_block .img, .bottom_block .img{
+    width: 100%;
+  }
+  .top_block .title h3, .bottom_block .title h3{
+    font-size: 20px;
+  }
+  .ontology p{
+    width: 100%;
+  }
+  footer .nav_container{
+    flex-direction: column;
+  }
+  footer .nav_container .title h3{
+    font-size: 22px;
+  }
+}

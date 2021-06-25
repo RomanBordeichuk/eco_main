@@ -1,0 +1,597 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+
+/*******PRELOADER********/
+
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #8cdea2;
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #3ba343;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+
+/*******HEADER********/
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 70px;
+  box-shadow: 0 0 20px #d1d1d1;
+  padding: 100px;
+  margin-bottom: 100px;
+}
+.wrap{
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+header{
+  background: url(../img/header.png);
+  background-size: 100%;
+  background-size: cover;
+  height: 470px;
+}
+header .wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .nav_container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .nav_container .logo{
+  width: 16%; 
+  display: flex;
+  align-items: flex-end;
+}
+header .nav_container .logo img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+header .nav_container nav{
+  display: flex;
+  width: 55%;
+}
+header .nav_container nav a{
+  padding: 25px; 
+  text-decoration: none;
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+header .nav_container nav a:nth-child(1){
+  color: #C0B912;
+}
+header .nav_container .test_container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 12%;
+}
+header .nav_container .test_container a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  border: 4px solid #C0B912;
+  padding: 15px 20px; 
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+header h1{
+  color: white;
+  font-size: 80px;  
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Rubik Mono One'
+}
+header span{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+/*******ABOUT PROJECT********/
+
+
+.about_project{
+  width: 100%;
+  margin-bottom: 70px;
+}
+.about_project .info{
+  display: flex; 
+  justify-content: center;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+.about_project .info .title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%; 
+}
+.about_project .info .title h2{
+  text-align: left;
+  color: #6e6e6e;
+  font-size: 40px;
+}
+.about_project .text{ 
+  width: 65%;   
+}
+.about_project .info .text p{
+  font-size: 30px;
+  font-family: 'Rubik', sans-serif;
+  text-align: justify;
+}
+.about_project .info .text p span{
+  font-weight: bold;
+}
+.about_project .slogan{
+  font-size: 45px;
+  width: 100%;
+  margin: 0 auto;
+}
+.about_project .slogan span{
+  width: 100%;
+  display: block;
+}
+.about_project .slogan span:nth-child(1){
+  color: #6e6e6e;
+}
+.about_project .slogan span:nth-child(2){
+  color: #6D854E;
+  text-align: center;
+}
+.about_project .slogan span:nth-child(3){
+  color: #C0B912;
+  text-align: right;
+}
+
+
+/*******GRADATION********/
+
+
+.gradation{
+  margin-bottom: 100px;
+  width: 100%;
+}
+.gradation .title{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.gradation .title h3{
+  max-width: 550px;
+  font-size: 35px;
+  color: #6e6e6e;
+}
+.gradation nav{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.gradation nav:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 18px;
+  width: 100%;
+  height: 3px;
+  background: black;
+}
+.gradation nav > div{
+  width: 270px;
+  font-size: 25px;
+  color: #6e6e6e;
+  display: flex;
+  flex-direction: column;
+}
+.gradation nav .circle{
+  width: 0;
+  height: 0;
+  border: 20px solid #6e6e6e;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+.gradation nav > div .second{
+  border: 20px solid #6D854E; 
+}
+.gradation nav > div .third{
+  border: 20px solid #C0B912; 
+}
+.gradation nav > div span{
+  color: #6D854E;
+  font-size: 40px;
+}
+.gradation .link_container{
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0;
+}
+.gradation .link_container a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #4a4a4a;
+  border: 5px solid #6D854E;
+  padding: 15px 20px;
+  border-radius: 50px;
+}
+
+
+/*******Famous_people********/
+
+
+.famous_people{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.famous_people div{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 200px;
+}
+.famous_people div:nth-child(4){
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: right;
+}
+.famous_people div:nth-child(4) h3{
+  font-size: 30px;
+  margin: 0; 
+  color: #474747;
+}
+.famous_people div img{
+  width: 100%;
+  padding: 0;
+}
+.famous_people div span{
+  color: #4a4a4a;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.famous_people div p{
+  display: inline-block;
+  width: 100%;
+  color: black;
+  font-family: Rubik;
+  font-size: 20px;
+  line-height: 27px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/*******REASON********/
+
+
+.reason{
+  width: 100%;
+}
+.reason .title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #686666;
+}
+.reason .title span:nth-child(1){
+  color: #6D854E;
+}
+.reason .title span:nth-child(2){
+  color: #C0B912;
+}
+.reason .main_reason{
+  display: flex;
+  justify-content: space-between;
+}
+.reason .main_reason .video{
+  width: 60%;
+}
+.reason .main_reason iframe{
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+}
+.reason .main_reason .play{
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+}
+.reason .main_reason p{
+  position: relative;
+  top: -30px;
+  width: 35%;
+  font-size: 30px;
+  text-align: center;
+  font-family: Rubik;
+}
+.reason .main_reason span.grey{
+  color: #686666;
+  font-weight: bold;
+}
+.reason .main_reason span.green{
+  color: #6D854E;
+  font-weight: bold;
+}
+.reason .main_reason span.yellow{
+  color: #C0B912;
+  font-weight: bold;
+}
+
+
+/*******LINK_START********/
+
+
+.link_start{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background: #6D854E;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link_start a{
+  position: absolute;
+  top: 0px;
+  font-size: 70px;
+  color: white;
+  text-decoration: none;
+}
+
+
+/*******FOOTER********/
+
+
+footer{
+  width: 100%;
+  height: 300px;
+  background: url(../img/footer.png);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+footer .nav_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .nav_container h3{
+  color: #6D854E;
+  font-size: 25px;
+}
+
+
+@media(max-width: 1150px){
+  header .nav_container nav a{
+    font-size: 22px;
+  }
+  header .nav_container .test_container a{
+    font-size: 22px;
+  }
+  .gradation nav > div{
+    font-size: 20px;
+  }
+  .famous_people div:nth-child(4) h3{
+    font-size: 28px;
+  }
+  .famous_people div span{
+    font-size: 16px;
+  }
+  .reason .main_reason p{
+    font-size: 26px;
+  }
+}
+@media(max-width: 920px){
+  .container{
+    padding: 50px;
+  }
+  header .nav_container .logo{
+    display: none;
+  }
+  header .nav_container nav{
+    width: 70%;
+  }
+  header .nav_container nav a{
+    font-size: calc(3vw + 5px);
+    padding: 10px 15px;
+  }
+  header .nav_container .test_container a{
+    font-size: calc(3vw + 5px);
+    padding: 10px 15px;
+  }
+  header h1{
+    font-size: calc(8vw + 10px);
+  }
+  header span{
+    font-size: calc(4vw + 10px);   
+  }
+  header{
+    height: 350px;
+  }
+  .link_start{
+    display: none;
+  }
+  .about_project .info{
+    flex-direction: column;
+  }
+  .about_project .info .title{
+    width: 100%;
+  }
+  .about_project .text{
+    width: 100%;
+  }
+  .about_project .info .text p{
+    font-size: 24px;
+  }
+  .about_project .slogan span{
+    font-size: 34px;
+  }
+  .about_project .slogan span:nth-child(2){
+    text-align: left;
+  }
+  .about_project .slogan span:nth-child(3){
+    text-align: left;
+  }
+  .gradation .title h3{
+    font-size: 28px;
+  }
+  .gradation nav{
+    flex-direction: column;
+  }
+  .gradation nav > div{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .gradation_info{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .gradation nav:before{
+    width: 3px;
+    height: 100%;
+    left: 19px;
+    top: 0;
+  }
+  .gradation .link_container{
+    justify-content: flex-start;
+  }
+  .famous_people{
+    flex-direction: column;
+  }
+  .famous_people > div{
+    width: 100%;
+  }
+  .famous_people div:nth-child(4){
+    order: -1;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 150px;
+  }
+  .famous_people div:nth-child(4) h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .famous_people div:nth-child(4) span{
+    font-size: 20px;
+    text-align: left;
+  }
+  .famous_people div span{
+    font-size: 20px;
+  }
+  .reason .title{
+    font-size: 24px;
+  }
+  .reason .main_reason{
+    flex-direction: column;
+  }
+  .reason .main_reason .video{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .reason .main_reason p{
+    width: 100%;
+  }
+  footer .nav_container{
+    flex-direction: column;
+  }
+  footer .nav_container .title h3{
+    font-size: 22px;
+  }
+}
